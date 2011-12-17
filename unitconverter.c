@@ -18,12 +18,11 @@
 
 int main(int argc, char *argv[]) 
 {
-	int quantity_switch;
+	int quantity_switch, INUnit, YUnit;
 	float input_number,output;
-	int INUnit, YUnit;
 	char input_YUnit[3], input_INUnit[3];
 	PrintLine();
-	printf("\n unitconverter - version 0.1.8\n\n");
+	printf("\n unitconverter - version 0.1.9\n\n");
 	PrintLine();
 	quantity_switch = Menu(2,Quantities);
 	switch (quantity_switch)
@@ -36,12 +35,11 @@ int main(int argc, char *argv[])
 			printf("Enter the unit in which you want to convert [%s]:\n",input_YUnit);	
 			scanf("%s",&input_INUnit[0]);
 			INUnit = CheckUnit(quantity_switch,input_INUnit);
-			if (YUnit == 255 || INUnit == 255) { printf("Error!\n\n"); return EXIT_FAILURE; }
 			output = input_number*Length_factors[YUnit][INUnit];
 			break;
-		case 2:	return EXIT_FAILURE;
-		default: printf("Error - Unknown\n");
-			return EXIT_FAILURE;
+		case 2:	Error(2);
+			break;
+		default: Error(1);
 	}
 	PrintLine();
 	printf(" %s --> %s\n",input_YUnit,input_INUnit);
