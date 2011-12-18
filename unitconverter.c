@@ -18,29 +18,22 @@
 
 int main(int argc, char *argv[]) 
 {
-	int quantity_switch, INUnit, YUnit;
-	float input_number,output;
-	char input_YUnit[3], input_INUnit[3];
+	struct Inputs input;
 	PrintLine();
-	printf("\n unitconverter - version 0.1.10\n\n");
+	printf("\n unitconverter - version 0.2.0\n\n");
 	PrintLine();
-	quantity_switch = Menu(2,Quantities);
-	switch (quantity_switch)
+	input.quantity_switch = Menu(2,Quantities);
+	switch (input.quantity_switch)
 	{
-		case 1: printf("Enter your unit:\n");
-			scanf("%s",&input_YUnit[0]);
-			YUnit = CheckUnit(quantity_switch,input_YUnit);
-			printf("Enter your value [%s]:\n",input_YUnit);
-			scanf("%f",&input_number);
-			printf("Enter the unit in which you want to convert [%s]:\n",input_YUnit);	
-			scanf("%s",&input_INUnit[0]);
-			INUnit = CheckUnit(quantity_switch,input_INUnit);
-			output = input_number*Length_factors[YUnit][INUnit];
+		case 1: input = Inputf(input);
+			input.output = input.input_number * Length_factors[input.YUnit][input.INUnit];
 			break;
+	
 		case 2:	Error(2);
 			break;
 		default: Error(1);
 	}
-	Output(input_number, input_YUnit, output, input_INUnit);
+	Output(input.input_number, input.input_YUnit, input.output, input.input_INUnit);
+	printf("\nThank you for using unitconverter!\n");
 	return EXIT_SUCCESS;
 }
