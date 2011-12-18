@@ -45,3 +45,9 @@ int Error(int error_type) {
 		exit(EXIT_FAILURE);
 }
 
+void Output(float input, char yunit[3], float output, char inunit[3]) {
+	PrintLine();
+	printf(" %s --> %s\n",yunit,inunit);
+	printf(" Solution:\n\t%g %s = %g %s\n",input,yunit,output,inunit);
+	PrintLine();
+}

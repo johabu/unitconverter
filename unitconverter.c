@@ -41,10 +41,6 @@ int main(int argc, char *argv[])
 			break;
 		default: Error(1);
 	}
-	PrintLine();
-	printf(" %s --> %s\n",input_YUnit,input_INUnit);
-	printf(" Solution:\n\t%g %s = %g %s\n",input_number,input_YUnit,output,input_INUnit);
-	PrintLine();
-	printf("\nThank you for using unitconverter!\n\n");
+	Output(input_number, input_YUnit, output, input_INUnit);
 	return EXIT_SUCCESS;
 }
