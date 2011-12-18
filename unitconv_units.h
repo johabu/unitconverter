@@ -4,7 +4,7 @@ char *Quantities[] = {"Length","Area"};
 
 char *Units_short[1][12] = {"cm","dm","m","km","mm","µm","nm","yd","ft","in","mi","NM"};
 
-char *Units[1][12] = {"cm (centimetre)","dm (decimetre)","m (metre)","km (kilometre)","mm (millimetre)","µm (micrometre)","nm (nanometre)","yd (yard)","ft (foot)","in (inch)","mi (mile)","NM (nautic mile)"};
+char *Units_long[1][12] = {"cm (centimetre)","dm (decimetre)","m (metre)","km (kilometre)","mm (millimetre)","µm (micrometre)","nm (nanometre)","yd (yard)","ft (foot)","in (inch)","mi (mile)","NM (nautic mile)"};
 
 float Length_factors[12][12] = { 
 	{1,0.1,0.01,0.00001,10,10000,10000000,0.01093613,0.032808,0.3937008,0.00000621371,0.00000539957},

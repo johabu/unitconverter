@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 {
 	struct Inputs input;
 	PrintLine();
-	printf("\n unitconverter - version 0.2.0\n\n");
+	printf("\n unitconverter - version 0.2.1\n\n");
 	PrintLine();
 	input.quantity_switch = Menu(2,Quantities);
 	switch (input.quantity_switch)
