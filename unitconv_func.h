@@ -3,7 +3,7 @@
 #include <string.h>
 #include "unitconv_units.h"
 
-char *Error_types[] = {"Unknown quantity!","Not available!"};
+char *Error_types[] = {"Unknown quantity!","Not available!","Unknown unit!"};
 
 void PrintLine() {
 	printf("===============================\n");
@@ -33,15 +33,15 @@ int CheckUnit(int Units, char input[3]) {
 	}
 	if (strcmp(input,"help") == 0) 
 	{
-		return 254;
-	} else
+	} 
+	else
 	{
-		return 255;
+		Error(3);
 	}
 }
 
 int Error(int error_type) {
 		printf("\nERROR - %s\n",Error_types[error_type-1]);
-		return EXIT_FAILURE;
+		exit(EXIT_FAILURE);
 }
 
