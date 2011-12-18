@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	float input_number,output;
 	char input_YUnit[3], input_INUnit[3];
 	PrintLine();
-	printf("\n unitconverter - version 0.1.9\n\n");
+	printf("\n unitconverter - version 0.1.10\n\n");
 	PrintLine();
 	quantity_switch = Menu(2,Quantities);
 	switch (quantity_switch)
