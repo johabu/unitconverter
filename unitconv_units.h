@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-char *Quantities[] = {"Length","Area"};
+char *Quantities[] = {"Length","Area","Volume"};
 
 char *Units_short[2][12] = {
 	{"cm","dm","m","km","mm","µm","nm","yd","ft","in","mi","NM"},
