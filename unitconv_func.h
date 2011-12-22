@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -7,10 +8,10 @@ struct Inputs {
 		int quantity_switch;
 		int YUnit;
 		int INUnit;
-		float input_number;
-		float output;
-		char input_YUnit[3];
-		char input_INUnit[3];
+		double input_number;
+		double output;
+		char input_YUnit[4];
+		char input_INUnit[4];
 	}; 
 
 char *Error_types[] = {"Error - Unknown quantity!","Error - Not available!","Error - Unknown unit!","Please restart the program!"};
@@ -60,10 +61,10 @@ int Error(int error_type) {
 		exit(EXIT_FAILURE);
 }
 
-void Output(float input, char yunit[3], float output, char inunit[3]) {
+void Output(double input, char yunit[3], double output, char inunit[3]) {
 	PrintLine();
-	printf(" %s --> %s\n",yunit,inunit);
-	printf(" Solution:\n\t%g %s = %g %s\n",input,yunit,output,inunit);
+	printf(" %s --> %s\n",yunit, inunit);
+	printf(" Solution:\n\t%g %s = %g %s\n",input, yunit, output,inunit);
 	PrintLine();
 }
 
@@ -75,7 +76,7 @@ struct Inputs Inputf(struct Inputs structure) {
 		structure.YUnit = CheckUnit(structure.quantity_switch, structure.input_YUnit);
 	}
 	printf("Enter your value [%s]:\n",structure.input_YUnit);
-	scanf("%f",&structure.input_number);
+	scanf("%lf",&structure.input_number);
 	structure.INUnit = 255;
 	while (structure.INUnit == 255) {
 		printf("Enter the unit in which you want to convert [%s]: ('help' for a list of available units)\n",structure.input_YUnit);	

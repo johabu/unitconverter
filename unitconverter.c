@@ -28,8 +28,8 @@ int main(int argc, char *argv[])
 		case 1: input = Inputf(input);
 			input.output = input.input_number * Length_factors[input.YUnit][input.INUnit];
 			break;
-	
-		case 2:	Error(2);
+		case 2:	input = Inputf(input);
+			input.output = input.input_number * Area_factors[input.YUnit][input.INUnit];
 			break;
 		default: Error(1);
 	}
