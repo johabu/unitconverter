@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
 		case 2:	input = Inputf(input);
 			input.output = input.input_number * Area_factors[input.YUnit][input.INUnit];
 			break;
+		case 3: Error(2);
 		default: Error(1);
 	}
 	Output(input.input_number, input.input_YUnit, input.output, input.input_INUnit);
