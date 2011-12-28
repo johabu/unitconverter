@@ -3,7 +3,7 @@ CC=gcc
 CFLAGS=-W -Wall -O2
 OUTPUT=unitconv
 
-all : objects
+all :  objects
 	gcc -o unitconv *.o
 
 objects : 

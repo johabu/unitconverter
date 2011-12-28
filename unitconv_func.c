@@ -54,6 +54,7 @@ int CheckUnit(int Units, char input[3]) {
 	{
 		Error(3);
 	}
+	return 0;
 }
 
 int Error(int error_type) {

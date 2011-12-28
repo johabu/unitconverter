@@ -12,12 +12,13 @@
 *
 *	unitconverter is distributed without any warranty!
 */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "unitconv_func.h"
 #include "unitconv_units.h"
 
-int main(int argc, char *argv[]) 
+int main(void) 
 {
 	struct Inputs input;
 	PrintLine();
