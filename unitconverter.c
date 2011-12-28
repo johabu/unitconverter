@@ -15,6 +15,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "unitconv_func.h"
+#include "unitconv_units.h"
 
 int main(int argc, char *argv[]) 
 {

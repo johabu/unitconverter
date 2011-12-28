@@ -1,8 +1,10 @@
+#ifndef UNITCONVFUNC
+#define UNITCONVFUNC
+
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "unitconv_units.h"
 
 struct Inputs {
 		int quantity_switch;
@@ -14,74 +16,19 @@ struct Inputs {
 		char input_INUnit[4];
 	}; 
 
-char *Error_types[] = {"Error - Unknown quantity!","Error - Not available!","Error - Unknown unit!","Please restart the program!"};
 
-void PrintLine() {
-	printf("===============================\n");
-}
+extern char *Error_types[]; 
 
-int Menu(int options_num, char *options_name[options_num]) 
-{
-	int i,selection;
-	printf("\n");
-	for (i = 1; i <= options_num; i++) 
-	{
-		printf("%d:\t%s\n",i,options_name[i-1]);
-	}
-	scanf("%d",&selection);
-	printf("You selected: %s\n",options_name[selection-1]);
-	return selection;
-}
+extern void PrintLine(); 
 
-int CheckUnit(int Units, char input[3]) {
-	int i;
-	for (i=0; i <= 11; i++) {
-		if (strcmp(input,Units_short[Units-1][i]) == 0) 
-		{
-			return i;
-			break;
-		}
-	}
-	if (strcmp(input,"help") == 0) 
-	{
-		printf("\nAvailable units:\n");
-		for (i=0; i <= 11; i++) {
-			printf("%s\n",Units_long[Units-1][i]);
-		}
-		return 255;
-	} 
-	else
-	{
-		Error(3);
-	}
-}
+extern int Menu(int options_num, char *options_name[options_num]);
 
-int Error(int error_type) {
-		printf("\n%s\n",Error_types[error_type-1]);
-		exit(EXIT_FAILURE);
-}
+extern int CheckUnit(int Units, char input[3]);
 
-void Output(double input, char yunit[3], double output, char inunit[3]) {
-	PrintLine();
-	printf(" %s --> %s\n",yunit, inunit);
-	printf(" Solution:\n\t%g %s = %g %s\n",input, yunit, output,inunit);
-	PrintLine();
-}
+extern int Error(int error_type) ;
 
-struct Inputs Inputf(struct Inputs structure) {
-	structure.YUnit = 255;
-	while (structure.YUnit == 255) {
-		printf("Enter your unit: ('help' for a list of available units)\n");
-		scanf("%s",&structure.input_YUnit[0]);
-		structure.YUnit = CheckUnit(structure.quantity_switch, structure.input_YUnit);
-	}
-	printf("Enter your value [%s]:\n",structure.input_YUnit);
-	scanf("%lf",&structure.input_number);
-	structure.INUnit = 255;
-	while (structure.INUnit == 255) {
-		printf("Enter the unit in which you want to convert [%s]: ('help' for a list of available units)\n",structure.input_YUnit);	
-		scanf("%s",&structure.input_INUnit[0]);
-		structure.INUnit = CheckUnit(structure.quantity_switch, structure.input_INUnit);
-	}
-	return structure;
-}
+extern void Output(double input, char yunit[3], double output, char inunit[3]) ;
+
+extern struct Inputs Inputf(struct Inputs structure) ;
+
+#endif
