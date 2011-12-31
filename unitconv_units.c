@@ -7,13 +7,13 @@ char *Error_types[] = {"Error - Unknown quantity!","Error - Not available!","Err
 char *Quantities[] = {"Length","Area","Volume"};
 
 char *Units_short[2][12] = {
-	{"cm","dm","m","km","mm","µm","nm","yd","ft","in","mi","NM"},
-	{"mm²","cm²","dm²","m²","a","ha","km²","yd²","ft²","in²","mi²","ac"},
+	{"cm","dm","m","km","mm","um","nm","yd","ft","in","mi","NM"},
+	{"mm2","cm2","dm2","m2","a","ha","km2","yd2","ft2","in2","mi2","ac"},
 	};
 
 char *Units_long[2][12] = {
-	{"cm (centimetre)","dm (decimetre)","m  (metre)","km (kilometre)","mm (millimetre)","µm (micrometre)","nm (nanometre)","yd (yard)","ft (foot)","in (inch)","mi (mile)","NM (nautic mile)"},
-	{"mm² (square millimetre)","cm² (square centimetre)","dm² (square decimetre)","m²  (square metre)","a   (are)","ha  (hectare)","km² (square kilometre)","yd² (square yard)","ft² (square feet)","in² (square inch)","mi² (square mile)","ac  (acre)"},
+	{"cm (centimetre)","dm (decimetre)","m  (metre)","km (kilometre)","mm (millimetre)","um (micrometre)","nm (nanometre)","yd (yard)","ft (foot)","in (inch)","mi (mile)","NM (nautic mile)"},
+	{"mm2 (square millimetre)","cm2 (square centimetre)","dm2 (square decimetre)","m2  (square metre)","a   (are)","ha  (hectare)","km2 (square kilometre)","yd2 (square yard)","ft2 (square feet)","in2 (square inch)","mi2 (square mile)","ac  (acre)"},
 	};
 
 
