@@ -62,10 +62,10 @@ int Error(int error_type) {
 		exit(EXIT_FAILURE);
 }
 
-void Output(double input, char yunit[3], double output, char inunit[3]) {
+void Output(struct Inputs input) { 	
 	PrintLine();
-	printf(" %s --> %s\n",yunit, inunit);
-	printf(" Solution:\n\t%g %s = %g %s\n",input, yunit, output,inunit);
+	printf(" %s --> %s\n",input.input_YUnit, input.input_INUnit);
+	printf(" Solution:\n\t%g %s = %g %s\n",input.input_number, input.input_YUnit, input.output,input.input_INUnit);
 	PrintLine();
 }
 

@@ -36,7 +36,7 @@ int main(void)
 		case 3: Error(2);
 		default: Error(1);
 	}
-	Output(input.input_number, input.input_YUnit, input.output, input.input_INUnit);
+	Output(input);
 	printf("\nThank you for using unitconverter!\n");
 	return EXIT_SUCCESS;
 }
