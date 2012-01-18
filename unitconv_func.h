@@ -27,7 +27,7 @@ extern int CheckUnit(int Units, char input[3]);
 
 extern int Error(int error_type) ;
 
-extern void Output(double input, char yunit[3], double output, char inunit[3]) ;
+extern void Output(struct Inputs); 
 
 extern struct Inputs Inputf(struct Inputs structure) ;
 
