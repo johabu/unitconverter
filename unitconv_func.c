@@ -52,7 +52,8 @@ int CheckUnit(int Units, char input[3]) {
 	} 
 	else
 	{
-		Error(3);
+		printf("%s\n",Error_types[2]);
+		return 255;
 	}
 	return 0;
 }
