@@ -1,6 +1,6 @@
 /*
 *	Unitconverter.c
-*	Developed by Johabu <http://johabu.spheniscida.de>
+*	Developed by Johabu <http://johabu.spheniscida.de>; <https://github.com/johabu/>
 *	
 *	This file is part of unitconverter.
 *	unitconverter is free software; you can modify it or redistribute it 

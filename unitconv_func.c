@@ -59,6 +59,7 @@ int CheckUnit(int Units, char input[3]) {
 
 int Error(int error_type) {
 		printf("\n%s\n",Error_types[error_type-1]);
+		PrintLine();
 		exit(EXIT_FAILURE);
 }
 
