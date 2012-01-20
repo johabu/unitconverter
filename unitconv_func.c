@@ -35,7 +35,7 @@ int Menu(int options_num, char *options_name[options_num])
 
 int CheckUnit(int Units, char input[3]) {
 	int i;
-	for (i=0; i <= 11; i++) {
+	for (i=0; i <= (Quantity_units_num[Units-1] - 1); i++) {
 		if (strcmp(input,Units_short[Units-1][i]) == 0) 
 		{
 			return i;

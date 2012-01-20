@@ -21,6 +21,8 @@ extern char *Error_types[];
 
 extern void PrintLine(); 
 
+extern int Quantity_units_num[];
+
 extern int Menu(int options_num, char *options_name[options_num]);
 
 extern int CheckUnit(int Units, char input[3]);

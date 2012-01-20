@@ -16,6 +16,7 @@ char *Units_long[2][12] = {
 	{"mm2 (square millimetre)","cm2 (square centimetre)","dm2 (square decimetre)","m2  (square metre)","a   (are)","ha  (hectare)","km2 (square kilometre)","yd2 (square yard)","ft2 (square feet)","in2 (square inch)","mi2 (square mile)","ac  (acre)"},
 	};
 
+int Quantity_units_num[] = {12,12};
 
 double Length_factors[12][12] = { 
 	{1,0.1,0.01,0.00001,10,10000,10000000,0.01093613,0.032808,0.3937008,0.00000621371,0.00000539957},

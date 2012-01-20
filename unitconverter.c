@@ -38,5 +38,6 @@ int main(void)
 	}
 	Output(input);
 	printf("\nThank you for using unitconverter!\n");
+	PrintLine();
 	return EXIT_SUCCESS;
 }
