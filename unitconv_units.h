@@ -9,5 +9,6 @@ extern char *Units_long[2][12];
 
 extern double Length_factors[12][12]; 
 extern double Area_factors[12][12];
+extern double Volume_factors[13][13];
 
 #endif
