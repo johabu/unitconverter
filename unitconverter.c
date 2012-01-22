@@ -22,7 +22,7 @@ int main(void)
 {
 	struct Inputs input;
 	PrintLine();
-	printf("\n unitconverter - version 0.2.4\n\n");
+	printf("\n unitconverter - version 0.2.55555\n\n");
 	PrintLine();
 	input.quantity_switch = Menu(3,Quantities);
 	switch (input.quantity_switch)
@@ -33,7 +33,9 @@ int main(void)
 		case 2:	input = Inputf(input);
 			input.output = input.input_number * Area_factors[input.YUnit][input.INUnit];
 			break;
-		case 3: Error(2);
+		case 3: input = Inputf(input);
+			input.output = input.input_number * Volume_factors[input.YUnit][input.INUnit];
+			break;
 		default: Error(1);
 	}
 	Output(input);
