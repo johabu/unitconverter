@@ -4,18 +4,7 @@
 #include <string.h>
 #include "unitconv_units.h"
 #include "unitconv_func.h"
-/*struct Inputs {
-		int quantity_switch;
-		int YUnit;
-		int INUnit;
-		double input_number;
-		double output;
-		char input_YUnit[4];
-		char input_INUnit[4];
-	}; 
 
-char *Error_types[] = {"Error - Unknown quantity!","Error - Not available!","Error - Unknown unit!","Please restart the program!"};
-*/
 void PrintLine() {
 	printf("===============================\n");
 }
