@@ -16,7 +16,8 @@
 
 ===================================README===================================
 
-unitconverter 0.2.4 is tested on Linux.
+unitconverter 0.2.4 is tested on Linux, OpenBSD.
+unitconverter 0.2.5 is tested on Linux.
 
 ==========Download and installing==========
 
