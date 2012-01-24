@@ -67,11 +67,11 @@ struct Inputs Inputf(struct Inputs structure) {
 		scanf("%s",&structure.input_YUnit[0]);
 		structure.YUnit = CheckUnit(structure.quantity_switch, structure.input_YUnit);
 	}
-	printf("Enter your value [%s]:\n",structure.input_YUnit);
+	printf("Enter your value:\n");
 	scanf("%lf",&structure.input_number);
 	structure.INUnit = 255;
 	while (structure.INUnit == 255) {
-		printf("Enter the unit in which you want to convert [%s]: ('help' for a list of available units)\n",structure.input_YUnit);	
+		printf("Enter the unit in which you want to convert: ('help' for a list of available units)\n");	
 		scanf("%s",&structure.input_INUnit[0]);
 		structure.INUnit = CheckUnit(structure.quantity_switch, structure.input_INUnit);
 	}
