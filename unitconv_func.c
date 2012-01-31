@@ -22,7 +22,7 @@ int Menu(int options_num, char *options_name[options_num])
 	return selection;
 }
 
-int CheckUnit(int Units, char input[4]) {
+int CheckUnit(int Units, char input[5]) {
 	int i;
 	for (i=0; i <= (Quantity_units_num[Units-1] - 1); i++) {
 		if (strcmp(input,Units_short[Units-1][i]) == 0) 

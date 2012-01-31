@@ -22,7 +22,7 @@ int main(void)
 {
 	struct Inputs input;
 	PrintLine();
-	printf("\n unitconverter - version 0.2.5\n\n");
+	printf("\n unitconverter - version 0.2.6\n\n");
 	PrintLine();
 	//user chooses the quantity
 	input.quantity_switch = Menu(3,Quantities);

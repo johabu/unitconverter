@@ -12,8 +12,8 @@ struct Inputs {
 		int INUnit;
 		double input_number;
 		double output;
-		char input_YUnit[4];
-		char input_INUnit[4];
+		char input_YUnit[5];
+		char input_INUnit[5];
 	}; 
 
 
@@ -25,7 +25,7 @@ extern int Quantity_units_num[];
 
 extern int Menu(int options_num, char *options_name[options_num]);
 
-extern int CheckUnit(int Units, char input[3]);
+extern int CheckUnit(int Units, char input[5]);
 
 extern int Error(int error_type) ;
 
