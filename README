@@ -16,8 +16,9 @@
 
 ===================================README===================================
 
-unitconverter 0.2.4 is tested on Linux, OpenBSD.
-unitconverter 0.2.5 is tested on Linux.
+version 0.2.4 is tested on Linux/UNIX, OpenBSD.
+version 0.2.5 is tested on Linux/UNIX.
+version 0.2.6 is tested on Linux/UNIX.
 
 ==========Download and installing==========
 
@@ -27,8 +28,8 @@ Linux:
 	Type the following commands in a shell:
 		cd /YOUR_PATH/unitconverter/
 		chmod +x install.sh
+		./install.sh
 		./unitconv
-	If there are any compiler warnings, please ignore them.
 	Now you are ready for converting!
 Windows:
 	Compile the files.
@@ -36,7 +37,7 @@ Windows:
 ==========Use==========
 
 Unitconverter is a simple interactive tool for converting units. 
-1.	 First you have to choose the quantity, e.g. "Area" by typing the number of the quantity.
+1.	First you have to choose the quantity, e.g. "Area" by typing the number of the quantity.
 2. 	Then you choose YOUR unit and type the short form of it. Example: You have 45 yards, so you type "yd" for "yard".
 	By typing "help" the program shows you a list of available units.
 3.	Now you must type the number of your unit, here 45.

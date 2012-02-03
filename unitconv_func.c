@@ -18,7 +18,6 @@ int Menu(int options_num, char *options_name[options_num])
 		printf("%d:\t%s\n",i,options_name[i-1]);
 	}
 	scanf("%d",&selection);
-	printf("You selected: %s\n",options_name[selection-1]);
 	return selection;
 }
 
