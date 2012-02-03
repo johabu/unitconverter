@@ -4,21 +4,23 @@
 
 char *Error_types[] = {"Error - Unknown quantity!","Error - Not available!","Error - Unknown unit!","Please restart the program!"};
 
-char *Quantities[] = {"Length","Area","Volume"};
+char *Quantities[] = {"Length","Area","Volume","Time"};
 
-char *Units_short[3][16] = {
+char *Units_short[4][16] = {
 	{"cm","dm","m","km","mm","um","nm","yd","ft","in","mi","NM"},
 	{"mm2","cm2","dm2","m2","a","ha","km2","yd2","ft2","in2","mi2","ac"},
 	{"mm3","cm3","dm3","m3","km3","ml","cl","dl","l","hl","yd3","ft3","in3","gal1","gal2","gal3"},
+	{"ns","us","ms","s","min","h","day","week","yr"},
 	};
 
-char *Units_long[3][16] = {
+char *Units_long[4][16] = {
 	{"cm (centimetre)","dm (decimetre)","m  (metre)","km (kilometre)","mm (millimetre)","um (micrometre)","nm (nanometre)","yd (yard)","ft (foot)","in (inch)","mi (mile)","NM (nautic mile)"},
 	{"mm2 (square millimetre)","cm2 (square centimetre)","dm2 (square decimetre)","m2  (square metre)","a   (are)","ha  (hectare)","km2 (square kilometre)","yd2 (square yard)","ft2 (square feet)","in2 (square inch)","mi2 (square mile)","ac  (acre)"},
 	{"mm3 (cubic millimetre)","cm3 (cubic centimetre)","dm3 (cubic decimetre)","m3  (cubic metre)","km3 (cubic kilometre)","ml  (millilitre)","cl  (centilitre)","dl  (decilitre","l   (litre)","hl  (hectolitre)","yd3 (cubic yard)","ft3 (cubic feet)","in3 (cubic inch)","gal1 (Imperial gallon)","gal2 (US liquid gallon)","gal3 (US dry gallon)"},
+	{"ns  (nanosecond)","us  (microsecond)","ms  (millisecond)","s   (second)","min (minute)","h   (hour)","week","yr  (year)"},
 	};
 
-int Quantity_units_num[] = {12,12,16};
+int Quantity_units_num[] = {12,12,16,9};
 
 double Length_factors[12][12] = { 
 	{1,0.1,0.01,0.00001,10,10000,10000000,0.01093613,0.032808,0.3937008,0.00000621371,0.00000539957},
@@ -66,6 +68,7 @@ double Volume_factors[16][16] = {
 	{3785409.6684,3785.4096684,3.7854096684,0.0037854096684,0.0000000000037854096684,3785.4096684,378.54096684,37.854096684,3.7854096684,0.037854096684,0.0049511304,0.1336805311,231,0.8326720223,1,0.8593667312},
 	{4404882.744,4404.882744,4.404882744,0.004404882744,0.000000000004404882744,4404.882744,440.4882744,44.04882744,4.404882744,0.04404822744,0.0057615708,0.1555570238,268.8025062,0.968936767,1.16364756,1},
 	};
-
+double Time_factors[9][9] = {
+	};
 
 #endif
