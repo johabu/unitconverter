@@ -22,12 +22,11 @@ int main(void)
 {
 	struct Inputs input;
 	PrintLine();
-	printf("\n unitconverter - version 0.2.6\n\n");
+	printf("\n unitconverter - version 0.2.7\n\n");
 	PrintLine();
 	//user chooses the quantity
 	input.quantity_switch = Menu(3,Quantities);
-	switch (input.quantity_switch)
-	{
+	switch (input.quantity_switch) {
 		//if quantity=length
 		case 1: input = Inputf(input);
 			input.output = input.input_number * Length_factors[input.YUnit][input.INUnit];

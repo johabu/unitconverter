@@ -14,7 +14,7 @@ struct Inputs {
 		double output;
 		char input_YUnit[5];
 		char input_INUnit[5];
-	}; 
+}; 
 
 
 extern char *Error_types[]; 
@@ -27,10 +27,10 @@ extern int Menu(int options_num, char *options_name[options_num]);
 
 extern int CheckUnit(int Units, char input[5]);
 
-extern int Error(int error_type) ;
+extern int Error(int error_type);
 
 extern void Output(struct Inputs); 
 
-extern struct Inputs Inputf(struct Inputs structure) ;
+extern struct Inputs Inputf(struct Inputs structure);
 
 #endif
