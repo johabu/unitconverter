@@ -16,9 +16,9 @@
 
 ===================================README===================================
 
-version 0.2.4 is tested on Linux/UNIX, OpenBSD.
-version 0.2.5 is tested on Linux/UNIX.
-version 0.2.6 is tested on Linux/UNIX.
+version 0.2.4 is tested on Linux, OpenBSD 5.0
+version 0.2.5 is tested on Linux.
+version 0.2.6 is tested on Linux, OpenBSD 5.0 (gcc)
 
 ==========Download and installing==========
 
@@ -26,13 +26,11 @@ First download the file (unitconverter.zip or unitconverter.tar.gz) and extract 
 
 Linux:
 	Type the following commands in a shell:
-		cd /YOUR_PATH/unitconverter/
-		chmod +x install.sh
+		cd /PATH/TO/unitconverter/
 		./install.sh
-		./unitconv
-	Now you are ready for converting!
+		# Eventual 'cp' to /usr/local/bin
 Windows:
-	Compile the files.
+	Compile the files, e.g. with your Visual Studio Express or a Intel C/C++ compiler
 
 ==========Use==========
 
