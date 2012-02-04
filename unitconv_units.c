@@ -2,7 +2,7 @@
 #define UNITCONVUNITS
 #include <stdlib.h>
 
-char *Error_types[] = {"Error - Unknown quantity!","Error - Not available!","Error - Unknown unit!","Please restart the program!"};
+char *Error_types[] = {"Error - Unknown quantity!","Error - Not available!","Error - Unknown unit!","Error in prompt - Please restart the program!"};
 
 char *Quantities[] = {"Length","Area","Volume"};
 
