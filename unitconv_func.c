@@ -17,7 +17,8 @@ int Menu(int options_num, char *options_name[options_num]) {
 		printf("%d:\t%s\n",i,options_name[i-1]);
 	}
 	prv = scanf("%d",&selection);
-	if (prv != 1) { Error(4); }
+	if (prv != 1) 
+                Error(4);
 	return selection;
 }
 
@@ -62,17 +63,20 @@ struct Inputs Inputf(struct Inputs structure) {
 	while (structure.YUnit == 255) {
 		printf("Enter your unit: ('help' for a list of available units)\n");
 		prv = scanf("%s",&structure.input_YUnit[0]);
-		if (prv != 1) { Error(4); }
+		if (prv != 1) 
+                        Error(4);
 		structure.YUnit = CheckUnit(structure.quantity_switch, structure.input_YUnit);
 	}
 	printf("Enter your value:\n");
 	prv = scanf("%lf",&structure.input_number);
-	if (prv != 1) { Error(4); }
+	if (prv != 1) 
+                Error(4);
 	structure.INUnit = 255;
 	while (structure.INUnit == 255) {
 		printf("Enter the unit in which you want to convert: ('help' for a list of available units)\n");	
 		prv = scanf("%s",&structure.input_INUnit[0]);
-		if (prv != 1) { Error(4); }
+		if (prv != 1)
+                        Error(4);
 		structure.INUnit = CheckUnit(structure.quantity_switch, structure.input_INUnit);
 	}
 	return structure;
