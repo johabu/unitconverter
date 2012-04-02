@@ -87,16 +87,22 @@ double TempConv(struct Inputs tempstruct) {
 		tempstruct.output = tempstruct.input_number;
 	}
 	if (tempstruct.YUnit == 0 && tempstruct.INUnit == 1) {
-		tempstruct.output = (tempstruct.input_number*1.8 +32);
+		tempstruct.output = (tempstruct.input_number*1.8 + 32);
 	}
 	if (tempstruct.YUnit == 0 && tempstruct.INUnit == 2) {
 		tempstruct.output = tempstruct.input_number+273.15;
 	}
-	if (tempstruct.YUnit == 1 && tempstrcut.INUnit == 0) {
+	if (tempstruct.YUnit == 1 && tempstruct.INUnit == 0) {
 		tempstruct.output = (tempstruct.input_number-32)*0.5555555556;
 	}
 	if (tempstruct.YUnit == 1 && tempstruct.INUnit == 2) {
 		tempstruct.output = (tempstruct.input_number+459.67)*0.5555555556;
+	}
+	if (tempstruct.YUnit == 2 && tempstruct.INUnit == 0) {
+		tempstruct.output = tempstruct.input_number-273.15;
+	}
+	if (tempstruct.YUnit == 2 && tempstruct.INUnit == 1) {
+		tempstruct.output = (tempstruct.input_number*1.8 - 459.67);
 	}
 	return tempstruct.output;
 }
