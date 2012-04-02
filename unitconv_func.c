@@ -61,7 +61,7 @@ struct Inputs Inputf(struct Inputs structure) {
 	structure.YUnit = 255;
 	int prv;
 	while (structure.YUnit == 255) {
-		printf("Enter your unit: ('help' for a list of available units)\n");
+		printf("\nEnter your unit: ('help' for a list of available units)\n");
 		prv = scanf("%s",&structure.input_YUnit[0]);
 		if (prv != 1) 
                         Error(4);
