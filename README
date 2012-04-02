@@ -16,9 +16,10 @@
 
 ===================================README===================================
 
-version 0.2.4 is tested on Linux, OpenBSD 5.0
 version 0.2.5 is tested on Linux.
 version 0.2.6 is tested on Linux, OpenBSD 5.0 (gcc)
+version 0.2.7 is tested on Linux.
+version 0.2.8 is tested on Linux.
 
 ==========Download and installing==========
 
@@ -35,11 +36,13 @@ Windows:
 ==========Use==========
 
 Unitconverter is a simple interactive tool for converting units. 
+
 1.	First you have to choose the quantity, e.g. "Area" by typing the number of the quantity.
 2. 	Then you choose YOUR unit and type the short form of it. Example: You have 45 yards, so you type "yd" for "yard".
 	By typing "help" the program shows you a list of available units.
 3.	Now you must type the number of your unit, here 45.
 4.	At last the program asks for the unit in which you want to convert your unit, e.g. "m" for "metres".
+
 You see, this is a really simple program with great potential.
 
 
