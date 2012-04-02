@@ -22,7 +22,7 @@ int main(void)
 {
 	struct Inputs input;
 	PrintLine();
-	printf("\n unitconverter - version 0.2.6\n\n");
+	printf("\n unitconverter - version 0.2.8\n\n");
 	PrintLine();
 	//user chooses the quantity
 	input.quantity_switch = Menu(4,Quantities);
@@ -40,7 +40,7 @@ int main(void)
 		case 3: input = Inputf(input);
 			input.output = input.input_number * Volume_factors[input.YUnit][input.INUnit];
 			break;
-		//if quantity=volume
+		//if quantity=time
 		case 4: input = Inputf(input);
 			input.output = input.input_number * Time_factors[input.YUnit][input.INUnit];
 			break;

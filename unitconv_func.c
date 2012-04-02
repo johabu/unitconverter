@@ -63,7 +63,7 @@ void Output(struct Inputs input) {
 struct Inputs Inputf(struct Inputs structure) {
 	structure.YUnit = 255;
 	while (structure.YUnit == 255) {
-		printf("Enter your unit: ('help' for a list of available units)\n");
+		printf("\nEnter your unit: ('help' for a list of available units)\n");
 		scanf("%s",&structure.input_YUnit[0]);
 		structure.YUnit = CheckUnit(structure.quantity_switch, structure.input_YUnit);
 	}
