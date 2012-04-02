@@ -81,3 +81,22 @@ struct Inputs Inputf(struct Inputs structure) {
 	}
 	return structure;
 }
+
+double TempConv(struct Inputs tempstruct) {
+	if (tempstruct.YUnit == tempstruct.INUnit) {
+		tempstruct.output = tempstruct.input_number;
+	}
+	if (tempstruct.YUnit == 0 && tempstruct.INUnit == 1) {
+		tempstruct.output = (tempstruct.input_number*1.8 +32);
+	}
+	if (tempstruct.YUnit == 0 && tempstruct.INUnit == 2) {
+		tempstruct.output = tempstruct.input_number+273.15;
+	}
+	if (tempstruct.YUnit == 1 && tempstrcut.INUnit == 0) {
+		tempstruct.output = (tempstruct.input_number-32)*0.5555555556;
+	}
+	if (tempstruct.YUnit == 1 && tempstruct.INUnit == 2) {
+		tempstruct.output = (tempstruct.input_number+459.67)*0.5555555556;
+	}
+	return tempstruct.output;
+}

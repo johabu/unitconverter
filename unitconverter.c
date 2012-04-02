@@ -22,10 +22,10 @@ int main(void)
 {
 	struct Inputs input;
 	PrintLine();
-	printf("\n unitconverter - version 0.2.8\n\n");
+	printf("\n unitconverter - version 0.3.0\n\n");
 	PrintLine();
 	//user chooses the quantity
-	input.quantity_switch = Menu(4,Quantities);
+	input.quantity_switch = Menu(5,Quantities);
 	switch (input.quantity_switch)
 	{
 		//if quantity=length
@@ -43,6 +43,10 @@ int main(void)
 		//if quantity=time
 		case 4: input = Inputf(input);
 			input.output = input.input_number * Time_factors[input.YUnit][input.INUnit];
+			break;
+		//if quantity=temperature
+		case 5: input = Inputf(input);
+			input.output = TempConv(input);
 			break;
 		default: Error(1);
 	}

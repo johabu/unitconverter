@@ -4,8 +4,8 @@
 
 extern char *Quantities[];
 
-extern char *Units_short[4][16]; 
-extern char *Units_long[4][16];
+extern char *Units_short[5][16]; 
+extern char *Units_long[5][16];
 
 extern int Quantity_units_num[];
 

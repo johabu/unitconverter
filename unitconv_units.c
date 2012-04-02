@@ -4,23 +4,25 @@
 
 char *Error_types[] = {"Error - Unknown quantity!","Error - Not available!","Error - Unknown unit!","Error in prompt - Please restart the program!"};
 
-char *Quantities[] = {"Length","Area","Volume","Time"};
+char *Quantities[] = {"Length","Area","Volume","Time","Temperature"};
 
-char *Units_short[4][16] = {
+char *Units_short[5][16] = {
 	{"cm","dm","m","km","mm","um","nm","yd","ft","in","mi","NM"},
 	{"mm2","cm2","dm2","m2","a","ha","km2","yd2","ft2","in2","mi2","ac"},
 	{"mm3","cm3","dm3","m3","km3","ml","cl","dl","l","hl","yd3","ft3","in3","gal1","gal2","gal3"},
 	{"ns","us","ms","s","min","h","day","week","yr"},
+	{"C","F","K"},
 	};
 
-char *Units_long[4][16] = {
+char *Units_long[5][16] = {
 	{"cm (centimetre)","dm (decimetre)","m  (metre)","km (kilometre)","mm (millimetre)","um (micrometre)","nm (nanometre)","yd (yard)","ft (foot)","in (inch)","mi (mile)","NM (nautic mile)"},
 	{"mm2 (square millimetre)","cm2 (square centimetre)","dm2 (square decimetre)","m2  (square metre)","a   (are)","ha  (hectare)","km2 (square kilometre)","yd2 (square yard)","ft2 (square feet)","in2 (square inch)","mi2 (square mile)","ac  (acre)"},
 	{"mm3 (cubic millimetre)","cm3 (cubic centimetre)","dm3 (cubic decimetre)","m3  (cubic metre)","km3 (cubic kilometre)","ml  (millilitre)","cl  (centilitre)","dl  (decilitre","l   (litre)","hl  (hectolitre)","yd3 (cubic yard)","ft3 (cubic feet)","in3 (cubic inch)","gal1 (Imperial gallon)","gal2 (US liquid gallon)","gal3 (US dry gallon)"},
 	{"ns  (nanosecond)","us  (microsecond)","ms  (millisecond)","s   (second)","min (minute)","h   (hour)","day","week","yr  (year)"},
+	{"C (degree Celsius)","F (degree Fahrenheit)","K (Kelvin)"},
 	};
 
-int Quantity_units_num[] = {12,12,16,9};
+int Quantity_units_num[] = {12,12,16,9,3};
 
 double Length_factors[12][12] = { 
 	{1,0.1,0.01,0.00001,10,10000,10000000,0.01093613,0.032808,0.3937008,0.00000621371,0.00000539957},

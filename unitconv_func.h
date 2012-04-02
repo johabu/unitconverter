@@ -33,4 +33,6 @@ extern void Output(struct Inputs);
 
 extern struct Inputs Inputf(struct Inputs structure);
 
+extern double TempConv(struct Inputs tempstruct);
+
 #endif
