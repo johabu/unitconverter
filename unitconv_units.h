@@ -13,5 +13,6 @@ extern double Length_factors[12][12];
 extern double Area_factors[12][12];
 extern double Volume_factors[16][16];
 extern double Time_factors[9][9];
+extern double Velocity_factors[5][5];
 
 #endif
