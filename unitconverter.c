@@ -50,7 +50,7 @@ int main(void)
 			break;
 		//if quantity=velocity
 		case 6: input = Inputf(input);
-			input.output = input.input_number * Velocity_factors[input.YUnit][inpu.INUnit];
+			input.output = input.input_number * Velocity_factors[input.YUnit][input.INUnit];
 			break;
 		default: Error(1);
 	}
