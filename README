@@ -16,11 +16,11 @@
 
 ===================================README===================================
 
-version 0.2.5 is tested on Linux.
 version 0.2.6 is tested on Linux, OpenBSD 5.0 (gcc)
 version 0.2.7 is tested on Linux.
 version 0.2.8 is tested on Linux.
-
+version 0.3.0 is tested on Linux.
+version 0.3.1 is tested on Linux.
 ==========Download and installing==========
 
 First download the file (unitconverter.zip or unitconverter.tar.gz) and extract the files.

@@ -5,6 +5,9 @@
 #include "unitconv_units.h"
 #include "unitconv_func.h"
 
+#define ND 255
+//ND: Not Defind
+
 void PrintLine() {
 	printf("===============================\n");
 }
@@ -35,11 +38,11 @@ int CheckUnit(int Units, char input[5]) {
 		for (i=0; i <= (Quantity_units_num[Units-1] - 1); i++) {
 			printf("%s\n",Units_long[Units-1][i]);
 		}
-		return 255;
+		return ND;
 	} 
 	else {
 		Error(3);
-		return 255;
+		return ND;
 	}
 	return 0;
 }
@@ -52,15 +55,14 @@ int Error(int error_type) {
 
 void Output(struct Inputs input) { 	
 	PrintLine();
-	printf(" %s --> %s\n",input.input_YUnit, input.input_INUnit);
 	printf(" Solution:\n\t%g %s = %g %s\n",input.input_number, input.input_YUnit, input.output,input.input_INUnit);
 	PrintLine();
 }
 
 struct Inputs Inputf(struct Inputs structure) {
-	structure.YUnit = 255;
+	structure.YUnit = ND; 
 	int prv;
-	while (structure.YUnit == 255) {
+	while (structure.YUnit == ND) {
 		printf("\nEnter your unit: ('help' for a list of available units)\n");
 		prv = scanf("%s",&structure.input_YUnit[0]);
 		if (prv != 1) 
@@ -71,8 +73,8 @@ struct Inputs Inputf(struct Inputs structure) {
 	prv = scanf("%lf",&structure.input_number);
 	if (prv != 1) 
                 Error(4);
-	structure.INUnit = 255;
-	while (structure.INUnit == 255) {
+	structure.INUnit = ND;
+	while (structure.INUnit == ND) {
 		printf("Enter the unit in which you want to convert: ('help' for a list of available units)\n");	
 		prv = scanf("%s",&structure.input_INUnit[0]);
 		if (prv != 1)
