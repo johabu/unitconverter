@@ -55,7 +55,9 @@ int Error(int error_type) {
 
 void Output(struct Inputs input) { 	
 	PrintLine();
+	PrintLine();
 	printf(" Solution:\n\t%g %s = %g %s\n",input.input_number, input.input_YUnit, input.output,input.input_INUnit);
+	PrintLine();
 	PrintLine();
 }
 
