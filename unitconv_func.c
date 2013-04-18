@@ -85,6 +85,7 @@ struct Inputs Inputf(struct Inputs structure) {
 }
 
 double TempConv(struct Inputs tempstruct) {
+	//-- 0 = deg Celsius / 1 = deg Fahrenheit / 2 = Kelvin / 3 = deg Rankine --//
 	if (tempstruct.YUnit == tempstruct.INUnit) {
 		tempstruct.output = tempstruct.input_number;
 	}
@@ -93,6 +94,9 @@ double TempConv(struct Inputs tempstruct) {
 	}
 	if (tempstruct.YUnit == 0 && tempstruct.INUnit == 2) {
 		tempstruct.output = tempstruct.input_number+273.15;
+	}
+	if (tempstruct.YUnit == 0 && tempstruct.INUnit == 3) {
+		tempstruct.output = (tempstruct.input_number*1.8 + 491.67);
 	}
 	if (tempstruct.YUnit == 1 && tempstruct.INUnit == 0) {
 		tempstruct.output = (tempstruct.input_number-32)*0.5555555556;

@@ -21,41 +21,54 @@
 int main(void) 
 {
 	struct Inputs input;
+	int convert_again = 1;
 	PrintLine();
-	printf("\n unitconverter - version 0.3.1\n\n");
+	printf("\n unitconverter - version 0.3.2\n\n");
 	PrintLine();
-	//user chooses the quantity
-	input.quantity_switch = Menu(6,Quantities);
-	switch (input.quantity_switch)
-	{
-		//if quantity=length
-		case 1: input = Inputf(input);
-			input.output = input.input_number * Length_factors[input.YUnit][input.INUnit];
-			break;
-		//if quantity=area
-		case 2:	input = Inputf(input);
-			input.output = input.input_number * Area_factors[input.YUnit][input.INUnit];
-			break;
-		//if quantity=volume
-		case 3: input = Inputf(input);
-			input.output = input.input_number * Volume_factors[input.YUnit][input.INUnit];
-			break;
-		//if quantity=time
-		case 4: input = Inputf(input);
-			input.output = input.input_number * Time_factors[input.YUnit][input.INUnit];
-			break;
-		//if quantity=temperature
-		case 5: input = Inputf(input);
-			input.output = TempConv(input);
-			break;
-		//if quantity=velocity
-		case 6: input = Inputf(input);
-			input.output = input.input_number * Velocity_factors[input.YUnit][input.INUnit];
-			break;
-		default: Error(1);
+	while (convert_again == 1) {
+		//user chooses the quantity
+		printf("\nChoose quantity by entering the corresponding number.\n0:\tExit\n");
+	        input.quantity_switch = Menu(7,Quantities);
+	        switch (input.quantity_switch) {
+	                //if quantity=length
+        	        case 1: input = Inputf(input);
+                	        input.output = input.input_number * Length_factors[input.YUnit][input.INUnit];
+	                        break;
+	                //if quantity=area
+	                case 2: input = Inputf(input);
+	                        input.output = input.input_number * Area_factors[input.YUnit][input.INUnit];
+	                        break;
+	                //if quantity=volume
+	                case 3: input = Inputf(input);
+	                        input.output = input.input_number * Volume_factors[input.YUnit][input.INUnit];
+	                        break;
+	                //if quantity=time
+	                case 4: input = Inputf(input);
+	                        input.output = input.input_number * Time_factors[input.YUnit][input.INUnit];
+	                        break;
+	                //if quantity=temperature
+	                case 5: input = Inputf(input);
+	                        input.output = TempConv(input);
+	                        break;
+	                //if quantity=velocity
+	                case 6: input = Inputf(input);
+	 	                input.output = input.input_number * Velocity_factors[input.YUnit][input.INUnit];
+	                        break;
+			//if quantity=mass
+                        case 7: input = Inputf(input);
+                                input.output = input.input_number * Mass_factors[input.YUnit][input.INUnit];
+                                break;
+			case 0: convert_again = 0;
+				break;
+	                default: Error(1);
+	        }
+	        //output of the solution
+	        if (convert_again != 0) {
+			Output(input);
+		}
+		//printf("Convert again? Enter '1'\n");
+		//scanf("%d",&convert_again);
 	}
-	//output of the solution
-	Output(input);
 	printf("\nThank you for using unitconverter!\n");
 	PrintLine();
 	return EXIT_SUCCESS;
